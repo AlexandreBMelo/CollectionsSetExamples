@@ -34,11 +34,13 @@ public class ListaTarefas {
             System.out.println(t);
         }
     }
-//Método que conta as tarefas
+
+    // Método que conta as tarefas
     public void contarTarefas() {
         System.out.println("Quantidade de tarefas: " + tarefas.size());
     }
-// Método que obtem as tarefas concluidas
+
+    // Método que obtem as tarefas concluidas
     public void obterTarefasConcluidas() {
         Set<Tarefas> tarefasConcluidas = new HashSet<>();
         for (Tarefas t : tarefas) {
@@ -49,7 +51,8 @@ public class ListaTarefas {
         }
         System.out.println(tarefasConcluidas);
     }
-// Método que obtem as tarefas pendentes
+
+    // Método que obtem as tarefas pendentes
     public void obterTarefasPendentes() {
         Tarefas tarefasPendentes = null;
         for (Tarefas t : tarefas) {
@@ -60,7 +63,8 @@ public class ListaTarefas {
         }
         System.out.println(tarefasPendentes);
     }
-// Metodo que marca como concluída
+
+    // Metodo que marca como concluída
     public void marcarTarefaConcluida(String descricao) {
         for (Tarefas t : tarefas) {
             if (t.getDescricao().equalsIgnoreCase(descricao) && !t.isCompleta()) {
@@ -69,7 +73,8 @@ public class ListaTarefas {
             }
         }
     }
-// Metodo que marca como pendente
+
+    // Metodo que marca como pendente
     public void marcarTarefaPendente(String descricao) {
         for (Tarefas t : tarefas) {
             if (t.getDescricao().equalsIgnoreCase(descricao) && t.isCompleta()) {
@@ -77,8 +82,9 @@ public class ListaTarefas {
             }
         }
     }
-    //Método que limpa a lista de tarefas
-    public void limparListaTarefas(){
+
+    // Método que limpa a lista de tarefas
+    public void limparListaTarefas() {
         tarefas.clear();
     }
 
@@ -90,7 +96,7 @@ public class ListaTarefas {
         tasks.exibirTarefas();
         tasks.marcarTarefaConcluida("Comprar armas");
         System.out.println("___________");
-        //tasks.obterTarefasConcluidas();
+        // tasks.obterTarefasConcluidas();
         tasks.limparListaTarefas();
         tasks.exibirTarefas();
     }
