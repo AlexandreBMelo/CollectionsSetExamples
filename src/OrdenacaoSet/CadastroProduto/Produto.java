@@ -1,4 +1,4 @@
-package OrdenacaoSet;
+package OrdenacaoSet.CadastroProduto;
 
 import java.util.Comparator;
 
